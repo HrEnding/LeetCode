@@ -1,11 +1,13 @@
 package algorithm;
 
+import org.springframework.util.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
- * <p>
+ *
  * 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母
  *
  * @author Hr_Ending
@@ -39,7 +41,7 @@ public class LetterCombinations {
     public List<String> letterCombinations(String digits) {
 
         res = new ArrayList<String>();
-        if (digits.equals("")) {
+        if (StringUtils.isEmpty(digits)) {
             return res;
         }
 
@@ -54,7 +56,7 @@ public class LetterCombinations {
             return;
         }
 
-        Character c = digits.charAt(index);
+        char c = digits.charAt(index);
         String letters = LETTER_MAP[c - '0'];
         for (int i = 0; i < letters.length(); i++) {
             findCombination(digits, index + 1, s + letters.charAt(i));
