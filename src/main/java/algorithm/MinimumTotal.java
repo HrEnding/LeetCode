@@ -7,7 +7,7 @@ import java.util.List;
  * <p>
  * 相邻的结点 在这里指的是 下标 与 上一层结点下标 相同或者等于 上一层结点下标 + 1 的两个结点。
  *
- * @author 21489
+ * @author Hr_Ending
  */
 public class MinimumTotal {
     public int minimumTotal(List<List<Integer>> triangle) {
